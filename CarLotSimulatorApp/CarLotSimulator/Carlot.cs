@@ -8,13 +8,15 @@ namespace CarLotSimulator
 {
     public class Carlot
     {
-       public Carlot()
+        public Carlot()
         {
 
         }
 
-        public static int numberofCars;
+        public static int NumberOfCars;
         public List<Car> CarLotList { get; set; } = new List<Car>();
+
+
 
 
     }

@@ -15,7 +15,7 @@ namespace CarLotSimulator
             //Now that the Car class is created we can instanciate 3 new cars
             Carlot carlotList = new Carlot();
             
-            
+            //Dot
             Car newCar = new Car();
             newCar.Year = 1954;
             newCar.Make = "Chevy";
@@ -23,12 +23,20 @@ namespace CarLotSimulator
             newCar.EngineNoise = "WaWaWaWaWa";
             newCar.HonkNoise = "AhWOOOOOOGA";
             newCar.IsDriveable = true;
+
+            carlotList.CarLotList.Add(newCar);
+
             
             newCar.MakeEngineNoise();
             newCar.MakeHonkNoise();
             newCar.PrintMakeModel();
 
-            carlotList.CarLotList.Add(newCar);
+
+            ;
+            
+
+
+            
 
             var newerCar = new Car()
             {
@@ -40,12 +48,15 @@ namespace CarLotSimulator
                 IsDriveable = true
             };
 
+            carlotList.CarLotList.Add(newerCar);
+
             newerCar.MakeEngineNoise();
             newerCar.MakeHonkNoise();
             newerCar.PrintMakeModel();
 
-           carlotList.CarLotList.Add(newerCar);
-
+            
+            
+            //Parametrized
             Car newestCar = new Car(1969, "Chevy", "Camaro", "DUDUDUDUDUDU", "Pow", true);
 
             newestCar.MakeEngineNoise();
@@ -54,6 +65,11 @@ namespace CarLotSimulator
 
             
             carlotList.CarLotList.Add(newestCar);
+
+            System.Console.WriteLine($" Number of cars in lot {Carlot.NumberOfCars}");
+
+
+           
 
 
             //Set the properties for each of the cars
